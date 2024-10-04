@@ -1,0 +1,52 @@
+/* Custom styles */
+.table-seat {
+  text-align: center;
+  vertical-align: middle;
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+}
+
+.table-seat.available {
+  background-color: #dff0d8; /* Light green */
+  color: #3c763d;
+  font-weight: bold;
+}
+
+.table-seat.booked {
+  background-color: #f2dede; /* Light red */
+  color: #a94442;
+  font-weight: bold;
+}
+
+.input-group {
+  max-width: 500px;
+  margin: auto;
+}
+
+.mt-5 {
+  margin-top: 3rem !important;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+button {
+  min-width: 150px;
+}
+
+.table {
+  margin-top: 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table td {
+  transition: background-color 0.3s ease;
+}
+
+.table td:hover {
+  background-color: #e6e6e6;
+}

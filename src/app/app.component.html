@@ -1,0 +1,39 @@
+<div class="text-center">
+  <h1>Train Seat Booking System</h1>
+  <div class="input-group my-4">
+    <div class="input-group-prepend">
+      <span class="input-group-text">Number of seats to book:</span>
+    </div>
+    <input
+      type="number"
+      class="form-control"
+      [(ngModel)]="numSeats"
+      min="1"
+      max="7"
+    />
+    <div class="input-group-append">
+      <button class="btn btn-primary" (click)="bookSeats()">Book Seats</button>
+    </div>
+  </div>
+  <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+  <table class="table table-bordered table-sm">
+    <tbody>
+      <tr *ngFor="let row of seats">
+        <td
+          *ngFor="let seat of row"
+          [ngClass]="{ available: seat === 0, booked: seat === 1 }"
+          class="table-seat"
+        >
+          <i
+            class="fas"
+            [ngClass]="{
+              'fa-check-circle': seat === 0,
+              'fa-times-circle': seat === 1
+            }"
+          ></i>
+          {{ seat === 0 ? 'Available' : 'Booked' }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
